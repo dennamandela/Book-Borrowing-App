@@ -1,0 +1,10 @@
+C:\Users\FARL\AppData\Local\Temporary Projects\Perpustakaan\bin\Debug\Perpustakaan.exe
+C:\Users\FARL\AppData\Local\Temporary Projects\Perpustakaan\bin\Debug\Perpustakaan.pdb
+C:\Users\FARL\AppData\Local\Temporary Projects\Perpustakaan\bin\Debug\Perpustakaan.xml
+C:\Users\FARL\AppData\Local\Temporary Projects\Perpustakaan\obj\x86\Debug\Perpustakaan.Form1.resources
+C:\Users\FARL\AppData\Local\Temporary Projects\Perpustakaan\obj\x86\Debug\Perpustakaan.Login.resources
+C:\Users\FARL\AppData\Local\Temporary Projects\Perpustakaan\obj\x86\Debug\Perpustakaan.Resources.resources
+C:\Users\FARL\AppData\Local\Temporary Projects\Perpustakaan\obj\x86\Debug\Perpustakaan.vbproj.GenerateResource.Cache
+C:\Users\FARL\AppData\Local\Temporary Projects\Perpustakaan\obj\x86\Debug\Perpustakaan.exe
+C:\Users\FARL\AppData\Local\Temporary Projects\Perpustakaan\obj\x86\Debug\Perpustakaan.xml
+C:\Users\FARL\AppData\Local\Temporary Projects\Perpustakaan\obj\x86\Debug\Perpustakaan.pdb
