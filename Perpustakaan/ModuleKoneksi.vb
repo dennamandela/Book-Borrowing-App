@@ -6,4 +6,14 @@ Module ModuleKoneksi
     Public da As OleDbDataAdapter
     Public dr As OleDbDataReader
     Public LokasiData As String
+    Sub Koneksi()
+        LokasiData = ""
+        conn() = New OleDbConnection(LokasiData)
+        If conn.State = ConnectionState.Closed Then
+            conn.Open()
+        Else
+            MsgBox("Koneksi Gagal")
+        End If
+    End Sub
+
 End Module
