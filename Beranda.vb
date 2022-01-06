@@ -92,4 +92,8 @@ Public Class Beranda
     Private Sub DataAnggotaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DataAnggotaToolStripMenuItem.Click
         FormAnggota.show()
     End Sub
+
+    Private Sub DataPeminjamanToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DataPeminjamanToolStripMenuItem.Click
+        TransaksiPeminjaman.Show()
+    End Sub
 End Class
