@@ -78,11 +78,10 @@
     <Compile Include="Beranda.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
+    <Compile Include="FormBuku.Designer.vb">
+      <DependentUpon>FormBuku.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="FormBuku.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.vb">
@@ -107,13 +106,23 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="perpustakaanDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>perpustakaanDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="perpustakaanDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>perpustakaanDataSet1.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Beranda.resx">
       <DependentUpon>Beranda.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="FormBuku.resx">
+      <DependentUpon>FormBuku.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
@@ -126,15 +135,56 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\DataSources\Beranda.datasource" />
+    <None Include="My Project\DataSources\FormBuku.datasource" />
+    <None Include="My Project\DataSources\Login.datasource" />
+    <None Include="My Project\DataSources\Perpustakaan.My.MyApplication.datasource" />
+    <None Include="My Project\DataSources\Perpustakaan.My.MySettings.datasource" />
+    <None Include="My Project\DataSources\Perpustakaan.perpustakaanDataSetTableAdapters.loginTableAdapter.datasource" />
+    <None Include="My Project\DataSources\Perpustakaan.perpustakaanDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="My Project\DataSources\Perpustakaan.perpustakaanDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="My Project\DataSources\perpustakaanDataSet.datasource" />
+    <None Include="My Project\DataSources\perpustakaanDataSet.loginDataTable.datasource" />
+    <None Include="My Project\DataSources\perpustakaanDataSet.loginRow.datasource" />
+    <None Include="My Project\DataSources\perpustakaanDataSet.loginRowChangeEvent.datasource" />
+    <None Include="My Project\DataSources\perpustakaanDataSet.loginRowChangeEventHandler.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <None Include="perpustakaanDataSet.xsc">
+      <DependentUpon>perpustakaanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="perpustakaanDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>perpustakaanDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="perpustakaanDataSet.xss">
+      <DependentUpon>perpustakaanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="perpustakaanDataSet1.xsc">
+      <DependentUpon>perpustakaanDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="perpustakaanDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>perpustakaanDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="perpustakaanDataSet1.xss">
+      <DependentUpon>perpustakaanDataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="perpustakaan.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

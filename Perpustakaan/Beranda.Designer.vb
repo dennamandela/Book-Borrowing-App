@@ -38,6 +38,12 @@ Partial Class Beranda
         Me.PrintSetupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MasterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DataBukuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DataAnggotaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DataPeminjamanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LaporanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LaporanPeminjamanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.UndoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RedoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -89,7 +95,11 @@ Partial Class Beranda
         '
         'MenuStrip
         '
+<<<<<<< HEAD
         Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MasterToolStripMenuItem, Me.LaporanToolStripMenuItem, Me.FileMenu, Me.EditMenu, Me.ViewMenu, Me.ToolsMenu, Me.WindowsMenu, Me.HelpMenu})
+=======
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.MasterToolStripMenuItem, Me.LaporanToolStripMenuItem, Me.EditMenu, Me.ViewMenu, Me.ToolsMenu, Me.WindowsMenu, Me.HelpMenu})
+>>>>>>> 8a821ac1d23063a9cad8148dd472b2a5e2ac137a
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.MdiWindowListItem = Me.WindowsMenu
         Me.MenuStrip.Name = "MenuStrip"
@@ -111,7 +121,7 @@ Partial Class Beranda
         Me.NewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         Me.NewToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
         Me.NewToolStripMenuItem.Text = "&New"
         '
         'OpenToolStripMenuItem
@@ -181,6 +191,44 @@ Partial Class Beranda
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
         Me.ExitToolStripMenuItem.Text = "E&xit"
+        '
+        'MasterToolStripMenuItem
+        '
+        Me.MasterToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataBukuToolStripMenuItem, Me.DataAnggotaToolStripMenuItem, Me.DataPeminjamanToolStripMenuItem})
+        Me.MasterToolStripMenuItem.Name = "MasterToolStripMenuItem"
+        Me.MasterToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
+        Me.MasterToolStripMenuItem.Text = "Master"
+        '
+        'DataBukuToolStripMenuItem
+        '
+        Me.DataBukuToolStripMenuItem.Name = "DataBukuToolStripMenuItem"
+        Me.DataBukuToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
+        Me.DataBukuToolStripMenuItem.Text = "Data Buku"
+        '
+        'DataAnggotaToolStripMenuItem
+        '
+        Me.DataAnggotaToolStripMenuItem.Name = "DataAnggotaToolStripMenuItem"
+        Me.DataAnggotaToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
+        Me.DataAnggotaToolStripMenuItem.Text = "Data Anggota"
+        '
+        'DataPeminjamanToolStripMenuItem
+        '
+        Me.DataPeminjamanToolStripMenuItem.Name = "DataPeminjamanToolStripMenuItem"
+        Me.DataPeminjamanToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
+        Me.DataPeminjamanToolStripMenuItem.Text = "Data Peminjaman"
+        '
+        'LaporanToolStripMenuItem
+        '
+        Me.LaporanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LaporanPeminjamanToolStripMenuItem})
+        Me.LaporanToolStripMenuItem.Name = "LaporanToolStripMenuItem"
+        Me.LaporanToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.LaporanToolStripMenuItem.Text = "Laporan"
+        '
+        'LaporanPeminjamanToolStripMenuItem
+        '
+        Me.LaporanPeminjamanToolStripMenuItem.Name = "LaporanPeminjamanToolStripMenuItem"
+        Me.LaporanPeminjamanToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.LaporanPeminjamanToolStripMenuItem.Text = "Laporan Peminjaman"
         '
         'EditMenu
         '
@@ -572,7 +620,13 @@ Partial Class Beranda
     Friend WithEvents MasterToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DataBukuToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DataAnggotaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+<<<<<<< HEAD
     Friend WithEvents DataPinjamToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents LaporanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+=======
+    Friend WithEvents DataPeminjamanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents LaporanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents LaporanPeminjamanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+>>>>>>> 8a821ac1d23063a9cad8148dd472b2a5e2ac137a
 
 End Class

@@ -11,6 +11,7 @@ C:\Users\FARL\AppData\Local\Temporary Projects\Perpustakaan\obj\x86\Debug\Perpus
 C:\Users\FARL\documents\visual studio 2010\Projects\Perpustakaan\Perpustakaan\obj\x86\Debug\Perpustakaan.exe
 C:\Users\FARL\documents\visual studio 2010\Projects\Perpustakaan\Perpustakaan\obj\x86\Debug\Perpustakaan.xml
 C:\Users\FARL\documents\visual studio 2010\Projects\Perpustakaan\Perpustakaan\obj\x86\Debug\Perpustakaan.pdb
+<<<<<<< HEAD
 C:\Users\FARL\documents\visual studio 2010\Projects\Perpustakaan\Perpustakaan\obj\x86\Debug\Perpustakaan.Beranda.resources
 C:\Users\FARL\documents\visual studio 2010\Projects\Perpustakaan\Perpustakaan\obj\x86\Debug\Perpustakaan.Form1.resources
 C:\Users\FARL\documents\visual studio 2010\Projects\Perpustakaan\Perpustakaan\obj\x86\Debug\Perpustakaan.Login.resources
@@ -19,3 +20,18 @@ C:\Users\FARL\documents\visual studio 2010\Projects\Perpustakaan\Perpustakaan\ob
 C:\Users\FARL\documents\visual studio 2010\Projects\Perpustakaan\Perpustakaan\bin\Debug\Perpustakaan.exe
 C:\Users\FARL\documents\visual studio 2010\Projects\Perpustakaan\Perpustakaan\bin\Debug\Perpustakaan.pdb
 C:\Users\FARL\documents\visual studio 2010\Projects\Perpustakaan\Perpustakaan\bin\Debug\Perpustakaan.xml
+=======
+C:\Users\HP\Documents\Visual Studio 2010\Projects\Book-Borrowing-App\Perpustakaan\obj\x86\Debug\Perpustakaan.exe
+C:\Users\HP\Documents\Visual Studio 2010\Projects\Book-Borrowing-App\Perpustakaan\obj\x86\Debug\Perpustakaan.xml
+C:\Users\HP\Documents\Visual Studio 2010\Projects\Book-Borrowing-App\Perpustakaan\obj\x86\Debug\Perpustakaan.pdb
+C:\Users\HP\Documents\Visual Studio 2010\Projects\Book-Borrowing-App\Perpustakaan\bin\Debug\perpustakaan.accdb
+C:\Users\HP\Documents\Visual Studio 2010\Projects\Book-Borrowing-App\Perpustakaan\bin\Debug\Perpustakaan.exe.config
+C:\Users\HP\Documents\Visual Studio 2010\Projects\Book-Borrowing-App\Perpustakaan\bin\Debug\Perpustakaan.exe
+C:\Users\HP\Documents\Visual Studio 2010\Projects\Book-Borrowing-App\Perpustakaan\bin\Debug\Perpustakaan.pdb
+C:\Users\HP\Documents\Visual Studio 2010\Projects\Book-Borrowing-App\Perpustakaan\bin\Debug\Perpustakaan.xml
+C:\Users\HP\Documents\Visual Studio 2010\Projects\Book-Borrowing-App\Perpustakaan\obj\x86\Debug\Perpustakaan.Beranda.resources
+C:\Users\HP\Documents\Visual Studio 2010\Projects\Book-Borrowing-App\Perpustakaan\obj\x86\Debug\Perpustakaan.Login.resources
+C:\Users\HP\Documents\Visual Studio 2010\Projects\Book-Borrowing-App\Perpustakaan\obj\x86\Debug\Perpustakaan.Resources.resources
+C:\Users\HP\Documents\Visual Studio 2010\Projects\Book-Borrowing-App\Perpustakaan\obj\x86\Debug\Perpustakaan.vbproj.GenerateResource.Cache
+C:\Users\HP\Documents\Visual Studio 2010\Projects\Book-Borrowing-App\Perpustakaan\obj\x86\Debug\Perpustakaan.FormBuku.resources
+>>>>>>> 8a821ac1d23063a9cad8148dd472b2a5e2ac137a
