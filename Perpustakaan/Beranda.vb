@@ -85,4 +85,7 @@ Public Class Beranda
 
     Private m_ChildFormNumber As Integer
 
+    Private Sub DataBukuToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DataBukuToolStripMenuItem.Click
+        FormBuku.show()
+    End Sub
 End Class

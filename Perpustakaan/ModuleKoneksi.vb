@@ -7,8 +7,8 @@ Module ModuleKoneksi
     Public dr As OleDbDataReader
     Public LokasiData As String
     Sub Koneksi()
-        LokasiData = ""
-        conn() = New OleDbConnection(LokasiData)
+        LokasiData = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=perpustakaan.accdb"
+        conn = New OleDbConnection(LokasiData)
         If conn.State = ConnectionState.Closed Then
             conn.Open()
         Else
