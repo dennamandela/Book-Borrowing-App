@@ -96,4 +96,10 @@ Public Class Beranda
     Private Sub DataPeminjamanToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DataPeminjamanToolStripMenuItem.Click
         TransaksiPeminjaman.Show()
     End Sub
+
+    
+    Private Sub Beranda_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        PictureBox1.Load("perpustakaan.jpg")
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+    End Sub
 End Class

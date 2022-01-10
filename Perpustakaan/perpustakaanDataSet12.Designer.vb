@@ -20,12 +20,12 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("perpustakaanDataSet"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("perpustakaanDataSet1"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class perpustakaanDataSet
+Partial Public Class perpustakaanDataSet1
     Inherits Global.System.Data.DataSet
     
-    Private tablebuku As bukuDataTable
+    Private tableanggota As anggotaDataTable
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -56,8 +56,8 @@ Partial Public Class perpustakaanDataSet
         If (Me.DetermineSchemaSerializationMode(info, context) = Global.System.Data.SchemaSerializationMode.IncludeSchema) Then
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXmlSchema(New Global.System.Xml.XmlTextReader(New Global.System.IO.StringReader(strSchema)))
-            If (Not (ds.Tables("buku")) Is Nothing) Then
-                MyBase.Tables.Add(New bukuDataTable(ds.Tables("buku")))
+            If (Not (ds.Tables("anggota")) Is Nothing) Then
+                MyBase.Tables.Add(New anggotaDataTable(ds.Tables("anggota")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -80,9 +80,9 @@ Partial Public Class perpustakaanDataSet
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property buku() As bukuDataTable
+    Public ReadOnly Property anggota() As anggotaDataTable
         Get
-            Return Me.tablebuku
+            Return Me.tableanggota
         End Get
     End Property
     
@@ -128,7 +128,7 @@ Partial Public Class perpustakaanDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As perpustakaanDataSet = CType(MyBase.Clone,perpustakaanDataSet)
+        Dim cln As perpustakaanDataSet1 = CType(MyBase.Clone,perpustakaanDataSet1)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -153,8 +153,8 @@ Partial Public Class perpustakaanDataSet
             Me.Reset
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXml(reader)
-            If (Not (ds.Tables("buku")) Is Nothing) Then
-                MyBase.Tables.Add(New bukuDataTable(ds.Tables("buku")))
+            If (Not (ds.Tables("anggota")) Is Nothing) Then
+                MyBase.Tables.Add(New anggotaDataTable(ds.Tables("anggota")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -188,10 +188,10 @@ Partial Public Class perpustakaanDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Friend Overloads Sub InitVars(ByVal initTable As Boolean)
-        Me.tablebuku = CType(MyBase.Tables("buku"),bukuDataTable)
+        Me.tableanggota = CType(MyBase.Tables("anggota"),anggotaDataTable)
         If (initTable = true) Then
-            If (Not (Me.tablebuku) Is Nothing) Then
-                Me.tablebuku.InitVars
+            If (Not (Me.tableanggota) Is Nothing) Then
+                Me.tableanggota.InitVars
             End If
         End If
     End Sub
@@ -199,18 +199,18 @@ Partial Public Class perpustakaanDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Sub InitClass()
-        Me.DataSetName = "perpustakaanDataSet"
+        Me.DataSetName = "perpustakaanDataSet1"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/perpustakaanDataSet2.xsd"
+        Me.Namespace = "http://tempuri.org/perpustakaanDataSet12.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
-        Me.tablebuku = New bukuDataTable()
-        MyBase.Tables.Add(Me.tablebuku)
+        Me.tableanggota = New anggotaDataTable()
+        MyBase.Tables.Add(Me.tableanggota)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Private Function ShouldSerializebuku() As Boolean
+    Private Function ShouldSerializeanggota() As Boolean
         Return false
     End Function
     
@@ -225,7 +225,7 @@ Partial Public Class perpustakaanDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As perpustakaanDataSet = New perpustakaanDataSet()
+        Dim ds As perpustakaanDataSet1 = New perpustakaanDataSet1()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -273,33 +273,33 @@ Partial Public Class perpustakaanDataSet
     End Function
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Delegate Sub bukuRowChangeEventHandler(ByVal sender As Object, ByVal e As bukuRowChangeEvent)
+    Public Delegate Sub anggotaRowChangeEventHandler(ByVal sender As Object, ByVal e As anggotaRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class bukuDataTable
-        Inherits Global.System.Data.TypedTableBase(Of bukuRow)
+    Partial Public Class anggotaDataTable
+        Inherits Global.System.Data.TypedTableBase(Of anggotaRow)
         
-        Private columnno_buku As Global.System.Data.DataColumn
+        Private columnid_anggota As Global.System.Data.DataColumn
         
-        Private columnjudul As Global.System.Data.DataColumn
+        Private columnnama As Global.System.Data.DataColumn
         
-        Private columnpengarang As Global.System.Data.DataColumn
+        Private columnalamat As Global.System.Data.DataColumn
         
-        Private columntahun_terbit As Global.System.Data.DataColumn
+        Private columnkota As Global.System.Data.DataColumn
         
-        Private columnjenis_buku As Global.System.Data.DataColumn
+        Private columnno_telp As Global.System.Data.DataColumn
         
-        Private columnstatus As Global.System.Data.DataColumn
+        Private columnjenis_kelamin As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "buku"
+            Me.TableName = "anggota"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -332,49 +332,49 @@ Partial Public Class perpustakaanDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property no_bukuColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property id_anggotaColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnno_buku
+                Return Me.columnid_anggota
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property judulColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property namaColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnjudul
+                Return Me.columnnama
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property pengarangColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property alamatColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnpengarang
+                Return Me.columnalamat
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property tahun_terbitColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property kotaColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columntahun_terbit
+                Return Me.columnkota
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property jenis_bukuColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property no_telpColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnjenis_buku
+                Return Me.columnno_telp
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property statusColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property jenis_kelaminColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnstatus
+                Return Me.columnjenis_kelamin
             End Get
         End Property
         
@@ -389,50 +389,50 @@ Partial Public Class perpustakaanDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As bukuRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As anggotaRow
             Get
-                Return CType(Me.Rows(index),bukuRow)
+                Return CType(Me.Rows(index),anggotaRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event bukuRowChanging As bukuRowChangeEventHandler
+        Public Event anggotaRowChanging As anggotaRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event bukuRowChanged As bukuRowChangeEventHandler
+        Public Event anggotaRowChanged As anggotaRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event bukuRowDeleting As bukuRowChangeEventHandler
+        Public Event anggotaRowDeleting As anggotaRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event bukuRowDeleted As bukuRowChangeEventHandler
+        Public Event anggotaRowDeleted As anggotaRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Sub AddbukuRow(ByVal row As bukuRow)
+        Public Overloads Sub AddanggotaRow(ByVal row As anggotaRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddbukuRow(ByVal no_buku As String, ByVal judul As String, ByVal pengarang As String, ByVal tahun_terbit As Short, ByVal jenis_buku As String, ByVal status As String) As bukuRow
-            Dim rowbukuRow As bukuRow = CType(Me.NewRow,bukuRow)
-            Dim columnValuesArray() As Object = New Object() {no_buku, judul, pengarang, tahun_terbit, jenis_buku, status}
-            rowbukuRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowbukuRow)
-            Return rowbukuRow
+        Public Overloads Function AddanggotaRow(ByVal id_anggota As String, ByVal nama As String, ByVal alamat As String, ByVal kota As String, ByVal no_telp As Short, ByVal jenis_kelamin As String) As anggotaRow
+            Dim rowanggotaRow As anggotaRow = CType(Me.NewRow,anggotaRow)
+            Dim columnValuesArray() As Object = New Object() {id_anggota, nama, alamat, kota, no_telp, jenis_kelamin}
+            rowanggotaRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowanggotaRow)
+            Return rowanggotaRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindByno_buku(ByVal no_buku As String) As bukuRow
-            Return CType(Me.Rows.Find(New Object() {no_buku}),bukuRow)
+        Public Function FindByid_anggota(ByVal id_anggota As String) As anggotaRow
+            Return CType(Me.Rows.Find(New Object() {id_anggota}),anggotaRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As bukuDataTable = CType(MyBase.Clone,bukuDataTable)
+            Dim cln As anggotaDataTable = CType(MyBase.Clone,anggotaDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -440,69 +440,69 @@ Partial Public Class perpustakaanDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New bukuDataTable()
+            Return New anggotaDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnno_buku = MyBase.Columns("no_buku")
-            Me.columnjudul = MyBase.Columns("judul")
-            Me.columnpengarang = MyBase.Columns("pengarang")
-            Me.columntahun_terbit = MyBase.Columns("tahun_terbit")
-            Me.columnjenis_buku = MyBase.Columns("jenis_buku")
-            Me.columnstatus = MyBase.Columns("status")
+            Me.columnid_anggota = MyBase.Columns("id_anggota")
+            Me.columnnama = MyBase.Columns("nama")
+            Me.columnalamat = MyBase.Columns("alamat")
+            Me.columnkota = MyBase.Columns("kota")
+            Me.columnno_telp = MyBase.Columns("no_telp")
+            Me.columnjenis_kelamin = MyBase.Columns("jenis_kelamin")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnno_buku = New Global.System.Data.DataColumn("no_buku", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnno_buku)
-            Me.columnjudul = New Global.System.Data.DataColumn("judul", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnjudul)
-            Me.columnpengarang = New Global.System.Data.DataColumn("pengarang", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnpengarang)
-            Me.columntahun_terbit = New Global.System.Data.DataColumn("tahun_terbit", GetType(Short), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columntahun_terbit)
-            Me.columnjenis_buku = New Global.System.Data.DataColumn("jenis_buku", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnjenis_buku)
-            Me.columnstatus = New Global.System.Data.DataColumn("status", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnstatus)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnno_buku}, true))
-            Me.columnno_buku.AllowDBNull = false
-            Me.columnno_buku.Unique = true
-            Me.columnno_buku.MaxLength = 11
-            Me.columnjudul.MaxLength = 255
-            Me.columnpengarang.MaxLength = 255
-            Me.columnjenis_buku.MaxLength = 50
-            Me.columnstatus.MaxLength = 50
+            Me.columnid_anggota = New Global.System.Data.DataColumn("id_anggota", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_anggota)
+            Me.columnnama = New Global.System.Data.DataColumn("nama", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnama)
+            Me.columnalamat = New Global.System.Data.DataColumn("alamat", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnalamat)
+            Me.columnkota = New Global.System.Data.DataColumn("kota", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnkota)
+            Me.columnno_telp = New Global.System.Data.DataColumn("no_telp", GetType(Short), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnno_telp)
+            Me.columnjenis_kelamin = New Global.System.Data.DataColumn("jenis_kelamin", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnjenis_kelamin)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_anggota}, true))
+            Me.columnid_anggota.AllowDBNull = false
+            Me.columnid_anggota.Unique = true
+            Me.columnid_anggota.MaxLength = 11
+            Me.columnnama.MaxLength = 255
+            Me.columnalamat.MaxLength = 255
+            Me.columnkota.MaxLength = 50
+            Me.columnjenis_kelamin.MaxLength = 50
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function NewbukuRow() As bukuRow
-            Return CType(Me.NewRow,bukuRow)
+        Public Function NewanggotaRow() As anggotaRow
+            Return CType(Me.NewRow,anggotaRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New bukuRow(builder)
+            Return New anggotaRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(bukuRow)
+            Return GetType(anggotaRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.bukuRowChangedEvent) Is Nothing) Then
-                RaiseEvent bukuRowChanged(Me, New bukuRowChangeEvent(CType(e.Row,bukuRow), e.Action))
+            If (Not (Me.anggotaRowChangedEvent) Is Nothing) Then
+                RaiseEvent anggotaRowChanged(Me, New anggotaRowChangeEvent(CType(e.Row,anggotaRow), e.Action))
             End If
         End Sub
         
@@ -510,8 +510,8 @@ Partial Public Class perpustakaanDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.bukuRowChangingEvent) Is Nothing) Then
-                RaiseEvent bukuRowChanging(Me, New bukuRowChangeEvent(CType(e.Row,bukuRow), e.Action))
+            If (Not (Me.anggotaRowChangingEvent) Is Nothing) Then
+                RaiseEvent anggotaRowChanging(Me, New anggotaRowChangeEvent(CType(e.Row,anggotaRow), e.Action))
             End If
         End Sub
         
@@ -519,8 +519,8 @@ Partial Public Class perpustakaanDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.bukuRowDeletedEvent) Is Nothing) Then
-                RaiseEvent bukuRowDeleted(Me, New bukuRowChangeEvent(CType(e.Row,bukuRow), e.Action))
+            If (Not (Me.anggotaRowDeletedEvent) Is Nothing) Then
+                RaiseEvent anggotaRowDeleted(Me, New anggotaRowChangeEvent(CType(e.Row,anggotaRow), e.Action))
             End If
         End Sub
         
@@ -528,14 +528,14 @@ Partial Public Class perpustakaanDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.bukuRowDeletingEvent) Is Nothing) Then
-                RaiseEvent bukuRowDeleting(Me, New bukuRowChangeEvent(CType(e.Row,bukuRow), e.Action))
+            If (Not (Me.anggotaRowDeletingEvent) Is Nothing) Then
+                RaiseEvent anggotaRowDeleting(Me, New anggotaRowChangeEvent(CType(e.Row,anggotaRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub RemovebukuRow(ByVal row As bukuRow)
+        Public Sub RemoveanggotaRow(ByVal row As anggotaRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -544,7 +544,7 @@ Partial Public Class perpustakaanDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As perpustakaanDataSet = New perpustakaanDataSet()
+            Dim ds As perpustakaanDataSet1 = New perpustakaanDataSet1()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -562,7 +562,7 @@ Partial Public Class perpustakaanDataSet
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "bukuDataTable"
+            attribute2.FixedValue = "anggotaDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -609,162 +609,162 @@ Partial Public Class perpustakaanDataSet
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class bukuRow
+    Partial Public Class anggotaRow
         Inherits Global.System.Data.DataRow
         
-        Private tablebuku As bukuDataTable
+        Private tableanggota As anggotaDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tablebuku = CType(Me.Table,bukuDataTable)
+            Me.tableanggota = CType(Me.Table,anggotaDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property no_buku() As String
+        Public Property id_anggota() As String
             Get
-                Return CType(Me(Me.tablebuku.no_bukuColumn),String)
+                Return CType(Me(Me.tableanggota.id_anggotaColumn),String)
             End Get
             Set
-                Me(Me.tablebuku.no_bukuColumn) = value
+                Me(Me.tableanggota.id_anggotaColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property judul() As String
+        Public Property nama() As String
             Get
                 Try 
-                    Return CType(Me(Me.tablebuku.judulColumn),String)
+                    Return CType(Me(Me.tableanggota.namaColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'judul' in table 'buku' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'nama' in table 'anggota' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablebuku.judulColumn) = value
+                Me(Me.tableanggota.namaColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property pengarang() As String
+        Public Property alamat() As String
             Get
                 Try 
-                    Return CType(Me(Me.tablebuku.pengarangColumn),String)
+                    Return CType(Me(Me.tableanggota.alamatColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'pengarang' in table 'buku' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'alamat' in table 'anggota' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablebuku.pengarangColumn) = value
+                Me(Me.tableanggota.alamatColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property tahun_terbit() As Short
+        Public Property kota() As String
             Get
                 Try 
-                    Return CType(Me(Me.tablebuku.tahun_terbitColumn),Short)
+                    Return CType(Me(Me.tableanggota.kotaColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'tahun_terbit' in table 'buku' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'kota' in table 'anggota' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablebuku.tahun_terbitColumn) = value
+                Me(Me.tableanggota.kotaColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property jenis_buku() As String
+        Public Property no_telp() As Short
             Get
                 Try 
-                    Return CType(Me(Me.tablebuku.jenis_bukuColumn),String)
+                    Return CType(Me(Me.tableanggota.no_telpColumn),Short)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'jenis_buku' in table 'buku' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'no_telp' in table 'anggota' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablebuku.jenis_bukuColumn) = value
+                Me(Me.tableanggota.no_telpColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property status() As String
+        Public Property jenis_kelamin() As String
             Get
                 Try 
-                    Return CType(Me(Me.tablebuku.statusColumn),String)
+                    Return CType(Me(Me.tableanggota.jenis_kelaminColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'status' in table 'buku' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'jenis_kelamin' in table 'anggota' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablebuku.statusColumn) = value
+                Me(Me.tableanggota.jenis_kelaminColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsjudulNull() As Boolean
-            Return Me.IsNull(Me.tablebuku.judulColumn)
+        Public Function IsnamaNull() As Boolean
+            Return Me.IsNull(Me.tableanggota.namaColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetjudulNull()
-            Me(Me.tablebuku.judulColumn) = Global.System.Convert.DBNull
+        Public Sub SetnamaNull()
+            Me(Me.tableanggota.namaColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IspengarangNull() As Boolean
-            Return Me.IsNull(Me.tablebuku.pengarangColumn)
+        Public Function IsalamatNull() As Boolean
+            Return Me.IsNull(Me.tableanggota.alamatColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetpengarangNull()
-            Me(Me.tablebuku.pengarangColumn) = Global.System.Convert.DBNull
+        Public Sub SetalamatNull()
+            Me(Me.tableanggota.alamatColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Istahun_terbitNull() As Boolean
-            Return Me.IsNull(Me.tablebuku.tahun_terbitColumn)
+        Public Function IskotaNull() As Boolean
+            Return Me.IsNull(Me.tableanggota.kotaColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Settahun_terbitNull()
-            Me(Me.tablebuku.tahun_terbitColumn) = Global.System.Convert.DBNull
+        Public Sub SetkotaNull()
+            Me(Me.tableanggota.kotaColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isjenis_bukuNull() As Boolean
-            Return Me.IsNull(Me.tablebuku.jenis_bukuColumn)
+        Public Function Isno_telpNull() As Boolean
+            Return Me.IsNull(Me.tableanggota.no_telpColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setjenis_bukuNull()
-            Me(Me.tablebuku.jenis_bukuColumn) = Global.System.Convert.DBNull
+        Public Sub Setno_telpNull()
+            Me(Me.tableanggota.no_telpColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsstatusNull() As Boolean
-            Return Me.IsNull(Me.tablebuku.statusColumn)
+        Public Function Isjenis_kelaminNull() As Boolean
+            Return Me.IsNull(Me.tableanggota.jenis_kelaminColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetstatusNull()
-            Me(Me.tablebuku.statusColumn) = Global.System.Convert.DBNull
+        Public Sub Setjenis_kelaminNull()
+            Me(Me.tableanggota.jenis_kelaminColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -772,16 +772,16 @@ Partial Public Class perpustakaanDataSet
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Class bukuRowChangeEvent
+    Public Class anggotaRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As bukuRow
+        Private eventRow As anggotaRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub New(ByVal row As bukuRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As anggotaRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -789,7 +789,7 @@ Partial Public Class perpustakaanDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property Row() As bukuRow
+        Public ReadOnly Property Row() As anggotaRow
             Get
                 Return Me.eventRow
             End Get
@@ -805,7 +805,7 @@ Partial Public Class perpustakaanDataSet
     End Class
 End Class
 
-Namespace perpustakaanDataSetTableAdapters
+Namespace perpustakaanDataSet1TableAdapters
     
     '''<summary>
     '''Represents the connection and commands used to retrieve and save data.
@@ -816,7 +816,7 @@ Namespace perpustakaanDataSetTableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class bukuTableAdapter
+    Partial Public Class anggotaTableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.System.Data.OleDb.OleDbDataAdapter
@@ -933,77 +933,77 @@ Namespace perpustakaanDataSetTableAdapters
             Me._adapter = New Global.System.Data.OleDb.OleDbDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "buku"
-            tableMapping.ColumnMappings.Add("no_buku", "no_buku")
-            tableMapping.ColumnMappings.Add("judul", "judul")
-            tableMapping.ColumnMappings.Add("pengarang", "pengarang")
-            tableMapping.ColumnMappings.Add("tahun_terbit", "tahun_terbit")
-            tableMapping.ColumnMappings.Add("jenis_buku", "jenis_buku")
-            tableMapping.ColumnMappings.Add("status", "status")
+            tableMapping.DataSetTable = "anggota"
+            tableMapping.ColumnMappings.Add("id_anggota", "id_anggota")
+            tableMapping.ColumnMappings.Add("nama", "nama")
+            tableMapping.ColumnMappings.Add("alamat", "alamat")
+            tableMapping.ColumnMappings.Add("kota", "kota")
+            tableMapping.ColumnMappings.Add("no_telp", "no_telp")
+            tableMapping.ColumnMappings.Add("jenis_kelamin", "jenis_kelamin")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `buku` WHERE ((`no_buku` = ?) AND ((? = 1 AND `judul` IS NULL) OR (`j"& _ 
-                "udul` = ?)) AND ((? = 1 AND `pengarang` IS NULL) OR (`pengarang` = ?)) AND ((? ="& _ 
-                " 1 AND `tahun_terbit` IS NULL) OR (`tahun_terbit` = ?)) AND ((? = 1 AND `jenis_b"& _ 
-                "uku` IS NULL) OR (`jenis_buku` = ?)) AND ((? = 1 AND `status` IS NULL) OR (`stat"& _ 
-                "us` = ?)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `anggota` WHERE ((`id_anggota` = ?) AND ((? = 1 AND `nama` IS NULL) O"& _ 
+                "R (`nama` = ?)) AND ((? = 1 AND `alamat` IS NULL) OR (`alamat` = ?)) AND ((? = 1"& _ 
+                " AND `kota` IS NULL) OR (`kota` = ?)) AND ((? = 1 AND `no_telp` IS NULL) OR (`no"& _ 
+                "_telp` = ?)) AND ((? = 1 AND `jenis_kelamin` IS NULL) OR (`jenis_kelamin` = ?)))"& _ 
+                ""
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_no_buku", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_buku", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_judul", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "judul", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_judul", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "judul", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_pengarang", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "pengarang", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_pengarang", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "pengarang", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_tahun_terbit", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "tahun_terbit", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_tahun_terbit", Global.System.Data.OleDb.OleDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "tahun_terbit", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_jenis_buku", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "jenis_buku", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_jenis_buku", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "jenis_buku", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_status", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "status", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_status", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "status", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_id_anggota", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "id_anggota", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_nama", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nama", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_nama", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nama", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_alamat", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "alamat", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_alamat", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "alamat", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_kota", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "kota", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_kota", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "kota", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_no_telp", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_telp", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_no_telp", Global.System.Data.OleDb.OleDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_telp", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_jenis_kelamin", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "jenis_kelamin", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_jenis_kelamin", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "jenis_kelamin", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `buku` (`no_buku`, `judul`, `pengarang`, `tahun_terbit`, `jenis_buku`"& _ 
-                ", `status`) VALUES (?, ?, ?, ?, ?, ?)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `anggota` (`id_anggota`, `nama`, `alamat`, `kota`, `no_telp`, `jenis_"& _ 
+                "kelamin`) VALUES (?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("no_buku", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_buku", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("judul", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "judul", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("pengarang", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "pengarang", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("tahun_terbit", Global.System.Data.OleDb.OleDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "tahun_terbit", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("jenis_buku", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "jenis_buku", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("status", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "status", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("id_anggota", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "id_anggota", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("nama", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nama", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("alamat", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "alamat", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("kota", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "kota", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("no_telp", Global.System.Data.OleDb.OleDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_telp", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("jenis_kelamin", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "jenis_kelamin", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `buku` SET `no_buku` = ?, `judul` = ?, `pengarang` = ?, `tahun_terbit` = ?"& _ 
-                ", `jenis_buku` = ?, `status` = ? WHERE ((`no_buku` = ?) AND ((? = 1 AND `judul` "& _ 
-                "IS NULL) OR (`judul` = ?)) AND ((? = 1 AND `pengarang` IS NULL) OR (`pengarang` "& _ 
-                "= ?)) AND ((? = 1 AND `tahun_terbit` IS NULL) OR (`tahun_terbit` = ?)) AND ((? ="& _ 
-                " 1 AND `jenis_buku` IS NULL) OR (`jenis_buku` = ?)) AND ((? = 1 AND `status` IS "& _ 
-                "NULL) OR (`status` = ?)))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `anggota` SET `id_anggota` = ?, `nama` = ?, `alamat` = ?, `kota` = ?, `no_"& _ 
+                "telp` = ?, `jenis_kelamin` = ? WHERE ((`id_anggota` = ?) AND ((? = 1 AND `nama` "& _ 
+                "IS NULL) OR (`nama` = ?)) AND ((? = 1 AND `alamat` IS NULL) OR (`alamat` = ?)) A"& _ 
+                "ND ((? = 1 AND `kota` IS NULL) OR (`kota` = ?)) AND ((? = 1 AND `no_telp` IS NUL"& _ 
+                "L) OR (`no_telp` = ?)) AND ((? = 1 AND `jenis_kelamin` IS NULL) OR (`jenis_kelam"& _ 
+                "in` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("no_buku", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_buku", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("judul", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "judul", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("pengarang", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "pengarang", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("tahun_terbit", Global.System.Data.OleDb.OleDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "tahun_terbit", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("jenis_buku", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "jenis_buku", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("status", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "status", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_no_buku", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_buku", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_judul", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "judul", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_judul", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "judul", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_pengarang", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "pengarang", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_pengarang", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "pengarang", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_tahun_terbit", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "tahun_terbit", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_tahun_terbit", Global.System.Data.OleDb.OleDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "tahun_terbit", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_jenis_buku", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "jenis_buku", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_jenis_buku", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "jenis_buku", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_status", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "status", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_status", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "status", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("id_anggota", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "id_anggota", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("nama", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nama", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("alamat", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "alamat", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("kota", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "kota", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("no_telp", Global.System.Data.OleDb.OleDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_telp", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("jenis_kelamin", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "jenis_kelamin", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_id_anggota", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "id_anggota", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_nama", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nama", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_nama", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nama", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_alamat", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "alamat", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_alamat", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "alamat", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_kota", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "kota", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_kota", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "kota", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_no_telp", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_telp", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_no_telp", Global.System.Data.OleDb.OleDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_telp", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_jenis_kelamin", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "jenis_kelamin", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_jenis_kelamin", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "jenis_kelamin", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.Perpustakaan.My.MySettings.Default.perpustakaanConnectionString
+            Me._connection.ConnectionString = Global.Perpustakaan.My.MySettings.Default.perpustakaanConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1012,7 +1012,7 @@ Namespace perpustakaanDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT no_buku, judul, pengarang, tahun_terbit, jenis_buku, status FROM buku"
+            Me._commandCollection(0).CommandText = "SELECT id_anggota, nama, alamat, kota, no_telp, jenis_kelamin FROM anggota"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -1020,7 +1020,7 @@ Namespace perpustakaanDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As perpustakaanDataSet.bukuDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As perpustakaanDataSet1.anggotaDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -1033,9 +1033,9 @@ Namespace perpustakaanDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As perpustakaanDataSet.bukuDataTable
+        Public Overloads Overridable Function GetData() As perpustakaanDataSet1.anggotaDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As perpustakaanDataSet.bukuDataTable = New perpustakaanDataSet.bukuDataTable()
+            Dim dataTable As perpustakaanDataSet1.anggotaDataTable = New perpustakaanDataSet1.anggotaDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -1043,15 +1043,15 @@ Namespace perpustakaanDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As perpustakaanDataSet.bukuDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As perpustakaanDataSet1.anggotaDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As perpustakaanDataSet) As Integer
-            Return Me.Adapter.Update(dataSet, "buku")
+        Public Overloads Overridable Function Update(ByVal dataSet As perpustakaanDataSet1) As Integer
+            Return Me.Adapter.Update(dataSet, "anggota")
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1072,46 +1072,46 @@ Namespace perpustakaanDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_no_buku As String, ByVal Original_judul As String, ByVal Original_pengarang As String, ByVal Original_tahun_terbit As Global.System.Nullable(Of Short), ByVal Original_jenis_buku As String, ByVal Original_status As String) As Integer
-            If (Original_no_buku Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_no_buku")
+        Public Overloads Overridable Function Delete(ByVal Original_id_anggota As String, ByVal Original_nama As String, ByVal Original_alamat As String, ByVal Original_kota As String, ByVal Original_no_telp As Global.System.Nullable(Of Short), ByVal Original_jenis_kelamin As String) As Integer
+            If (Original_id_anggota Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_id_anggota")
             Else
-                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_no_buku,String)
+                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_id_anggota,String)
             End If
-            If (Original_judul Is Nothing) Then
+            If (Original_nama Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_judul,String)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_nama,String)
             End If
-            If (Original_pengarang Is Nothing) Then
+            If (Original_alamat Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_pengarang,String)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_alamat,String)
             End If
-            If (Original_tahun_terbit.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_tahun_terbit.Value,Short)
-            Else
+            If (Original_kota Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_kota,String)
             End If
-            If (Original_jenis_buku Is Nothing) Then
+            If (Original_no_telp.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_no_telp.Value,Short)
+            Else
                 Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_jenis_buku,String)
             End If
-            If (Original_status Is Nothing) Then
+            If (Original_jenis_kelamin Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_status,String)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_jenis_kelamin,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -1132,36 +1132,36 @@ Namespace perpustakaanDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal no_buku As String, ByVal judul As String, ByVal pengarang As String, ByVal tahun_terbit As Global.System.Nullable(Of Short), ByVal jenis_buku As String, ByVal status As String) As Integer
-            If (no_buku Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("no_buku")
+        Public Overloads Overridable Function Insert(ByVal id_anggota As String, ByVal nama As String, ByVal alamat As String, ByVal kota As String, ByVal no_telp As Global.System.Nullable(Of Short), ByVal jenis_kelamin As String) As Integer
+            If (id_anggota Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("id_anggota")
             Else
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(no_buku,String)
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(id_anggota,String)
             End If
-            If (judul Is Nothing) Then
+            If (nama Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(judul,String)
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(nama,String)
             End If
-            If (pengarang Is Nothing) Then
+            If (alamat Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(pengarang,String)
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(alamat,String)
             End If
-            If (tahun_terbit.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(tahun_terbit.Value,Short)
-            Else
+            If (kota Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
-            End If
-            If (jenis_buku Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(jenis_buku,String)
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(kota,String)
             End If
-            If (status Is Nothing) Then
+            If (no_telp.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(no_telp.Value,Short)
+            Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (jenis_kelamin Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(status,String)
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(jenis_kelamin,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -1182,76 +1182,76 @@ Namespace perpustakaanDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal no_buku As String, ByVal judul As String, ByVal pengarang As String, ByVal tahun_terbit As Global.System.Nullable(Of Short), ByVal jenis_buku As String, ByVal status As String, ByVal Original_no_buku As String, ByVal Original_judul As String, ByVal Original_pengarang As String, ByVal Original_tahun_terbit As Global.System.Nullable(Of Short), ByVal Original_jenis_buku As String, ByVal Original_status As String) As Integer
-            If (no_buku Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("no_buku")
+        Public Overloads Overridable Function Update(ByVal id_anggota As String, ByVal nama As String, ByVal alamat As String, ByVal kota As String, ByVal no_telp As Global.System.Nullable(Of Short), ByVal jenis_kelamin As String, ByVal Original_id_anggota As String, ByVal Original_nama As String, ByVal Original_alamat As String, ByVal Original_kota As String, ByVal Original_no_telp As Global.System.Nullable(Of Short), ByVal Original_jenis_kelamin As String) As Integer
+            If (id_anggota Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("id_anggota")
             Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(no_buku,String)
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(id_anggota,String)
             End If
-            If (judul Is Nothing) Then
+            If (nama Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(judul,String)
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(nama,String)
             End If
-            If (pengarang Is Nothing) Then
+            If (alamat Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(pengarang,String)
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(alamat,String)
             End If
-            If (tahun_terbit.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(tahun_terbit.Value,Short)
-            Else
+            If (kota Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
-            End If
-            If (jenis_buku Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(jenis_buku,String)
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(kota,String)
             End If
-            If (status Is Nothing) Then
+            If (no_telp.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(no_telp.Value,Short)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (jenis_kelamin Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(status,String)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(jenis_kelamin,String)
             End If
-            If (Original_no_buku Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_no_buku")
+            If (Original_id_anggota Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_id_anggota")
             Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_no_buku,String)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_id_anggota,String)
             End If
-            If (Original_judul Is Nothing) Then
+            If (Original_nama Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(7).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_judul,String)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_nama,String)
             End If
-            If (Original_pengarang Is Nothing) Then
+            If (Original_alamat Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_pengarang,String)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_alamat,String)
             End If
-            If (Original_tahun_terbit.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_tahun_terbit.Value,Short)
-            Else
+            If (Original_kota Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_kota,String)
             End If
-            If (Original_jenis_buku Is Nothing) Then
+            If (Original_no_telp.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_no_telp.Value,Short)
+            Else
                 Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_jenis_buku,String)
             End If
-            If (Original_status Is Nothing) Then
+            If (Original_jenis_kelamin Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_status,String)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_jenis_kelamin,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -1272,8 +1272,8 @@ Namespace perpustakaanDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal judul As String, ByVal pengarang As String, ByVal tahun_terbit As Global.System.Nullable(Of Short), ByVal jenis_buku As String, ByVal status As String, ByVal Original_no_buku As String, ByVal Original_judul As String, ByVal Original_pengarang As String, ByVal Original_tahun_terbit As Global.System.Nullable(Of Short), ByVal Original_jenis_buku As String, ByVal Original_status As String) As Integer
-            Return Me.Update(Original_no_buku, judul, pengarang, tahun_terbit, jenis_buku, status, Original_no_buku, Original_judul, Original_pengarang, Original_tahun_terbit, Original_jenis_buku, Original_status)
+        Public Overloads Overridable Function Update(ByVal nama As String, ByVal alamat As String, ByVal kota As String, ByVal no_telp As Global.System.Nullable(Of Short), ByVal jenis_kelamin As String, ByVal Original_id_anggota As String, ByVal Original_nama As String, ByVal Original_alamat As String, ByVal Original_kota As String, ByVal Original_no_telp As Global.System.Nullable(Of Short), ByVal Original_jenis_kelamin As String) As Integer
+            Return Me.Update(Original_id_anggota, nama, alamat, kota, no_telp, jenis_kelamin, Original_id_anggota, Original_nama, Original_alamat, Original_kota, Original_no_telp, Original_jenis_kelamin)
         End Function
     End Class
     
@@ -1290,7 +1290,7 @@ Namespace perpustakaanDataSetTableAdapters
         
         Private _updateOrder As UpdateOrderOption
         
-        Private _bukuTableAdapter As bukuTableAdapter
+        Private _anggotaTableAdapter As anggotaTableAdapter
         
         Private _backupDataSetBeforeUpdate As Boolean
         
@@ -1312,12 +1312,12 @@ Namespace perpustakaanDataSetTableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
             "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property bukuTableAdapter() As bukuTableAdapter
+        Public Property anggotaTableAdapter() As anggotaTableAdapter
             Get
-                Return Me._bukuTableAdapter
+                Return Me._anggotaTableAdapter
             End Get
             Set
-                Me._bukuTableAdapter = value
+                Me._anggotaTableAdapter = value
             End Set
         End Property
         
@@ -1340,9 +1340,9 @@ Namespace perpustakaanDataSetTableAdapters
                 If (Not (Me._connection) Is Nothing) Then
                     Return Me._connection
                 End If
-                If ((Not (Me._bukuTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._bukuTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._bukuTableAdapter.Connection
+                If ((Not (Me._anggotaTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._anggotaTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._anggotaTableAdapter.Connection
                 End If
                 Return Nothing
             End Get
@@ -1357,7 +1357,7 @@ Namespace perpustakaanDataSetTableAdapters
         Public ReadOnly Property TableAdapterInstanceCount() As Integer
             Get
                 Dim count As Integer = 0
-                If (Not (Me._bukuTableAdapter) Is Nothing) Then
+                If (Not (Me._anggotaTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 Return count
@@ -1369,14 +1369,14 @@ Namespace perpustakaanDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateUpdatedRows(ByVal dataSet As perpustakaanDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateUpdatedRows(ByVal dataSet As perpustakaanDataSet1, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._bukuTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.buku.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+            If (Not (Me._anggotaTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.anggota.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._bukuTableAdapter.Update(updatedRows))
+                    result = (result + Me._anggotaTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -1388,13 +1388,13 @@ Namespace perpustakaanDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateInsertedRows(ByVal dataSet As perpustakaanDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateInsertedRows(ByVal dataSet As perpustakaanDataSet1, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._bukuTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.buku.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+            If (Not (Me._anggotaTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.anggota.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._bukuTableAdapter.Update(addedRows))
+                    result = (result + Me._anggotaTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -1406,13 +1406,13 @@ Namespace perpustakaanDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateDeletedRows(ByVal dataSet As perpustakaanDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateDeletedRows(ByVal dataSet As perpustakaanDataSet1, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._bukuTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.buku.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._anggotaTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.anggota.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._bukuTableAdapter.Update(deletedRows))
+                    result = (result + Me._anggotaTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -1450,15 +1450,15 @@ Namespace perpustakaanDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function UpdateAll(ByVal dataSet As perpustakaanDataSet) As Integer
+        Public Overridable Function UpdateAll(ByVal dataSet As perpustakaanDataSet1) As Integer
             If (dataSet Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("dataSet")
             End If
             If (dataSet.HasChanges = false) Then
                 Return 0
             End If
-            If ((Not (Me._bukuTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._bukuTableAdapter.Connection) = false)) Then
+            If ((Not (Me._anggotaTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._anggotaTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
                         "tring.")
             End If
@@ -1494,13 +1494,13 @@ Namespace perpustakaanDataSetTableAdapters
             Try 
                 '---- Prepare for update -----------
                 '
-                If (Not (Me._bukuTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._bukuTableAdapter, Me._bukuTableAdapter.Connection)
-                    Me._bukuTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
-                    Me._bukuTableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
-                    If Me._bukuTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._bukuTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._bukuTableAdapter.Adapter)
+                If (Not (Me._anggotaTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._anggotaTableAdapter, Me._anggotaTableAdapter.Connection)
+                    Me._anggotaTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
+                    Me._anggotaTableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
+                    If Me._anggotaTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._anggotaTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._anggotaTableAdapter.Adapter)
                     End If
                 End If
                 '
@@ -1563,9 +1563,9 @@ Namespace perpustakaanDataSetTableAdapters
                 If workConnOpened Then
                     workConnection.Close
                 End If
-                If (Not (Me._bukuTableAdapter) Is Nothing) Then
-                    Me._bukuTableAdapter.Connection = CType(revertConnections(Me._bukuTableAdapter),Global.System.Data.OleDb.OleDbConnection)
-                    Me._bukuTableAdapter.Transaction = Nothing
+                If (Not (Me._anggotaTableAdapter) Is Nothing) Then
+                    Me._anggotaTableAdapter.Connection = CType(revertConnections(Me._anggotaTableAdapter),Global.System.Data.OleDb.OleDbConnection)
+                    Me._anggotaTableAdapter.Transaction = Nothing
                 End If
                 If (0 < adaptersWithAcceptChangesDuringUpdate.Count) Then
                     Dim adapters((adaptersWithAcceptChangesDuringUpdate.Count) - 1) As Global.System.Data.Common.DataAdapter

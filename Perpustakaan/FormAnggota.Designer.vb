@@ -28,10 +28,8 @@ Partial Class FormAnggota
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.simpan = New System.Windows.Forms.Button()
@@ -44,14 +42,16 @@ Partial Class FormAnggota
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.JeniskelaminDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AnggotaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PerpustakaanDataSet2 = New Perpustakaan.perpustakaanDataSet2()
-        Me.AnggotaTableAdapter = New Perpustakaan.perpustakaanDataSet2TableAdapters.anggotaTableAdapter()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.PerpustakaanDataSet1 = New Perpustakaan.perpustakaanDataSet1()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.AnggotaTableAdapter = New Perpustakaan.perpustakaanDataSet1TableAdapters.anggotaTableAdapter()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AnggotaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PerpustakaanDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PerpustakaanDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -92,25 +92,17 @@ Partial Class FormAnggota
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(90, 157)
+        Me.Label3.Location = New System.Drawing.Point(90, 154)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(57, 20)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = " Alamat:"
         '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(153, 146)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(193, 96)
-        Me.RichTextBox1.TabIndex = 6
-        Me.RichTextBox1.Text = ""
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(457, 46)
+        Me.Label4.Location = New System.Drawing.Point(514, 46)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(40, 20)
         Me.Label4.TabIndex = 7
@@ -120,32 +112,22 @@ Partial Class FormAnggota
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(414, 102)
+        Me.Label5.Location = New System.Drawing.Point(471, 102)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(83, 20)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "No Telepon:"
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(405, 157)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(92, 20)
-        Me.Label6.TabIndex = 9
-        Me.Label6.Text = "Tanggal Lahir:"
-        '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(503, 48)
+        Me.TextBox3.Location = New System.Drawing.Point(560, 48)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(193, 20)
         Me.TextBox3.TabIndex = 10
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(503, 104)
+        Me.TextBox4.Location = New System.Drawing.Point(560, 102)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(193, 20)
         Me.TextBox4.TabIndex = 11
@@ -190,7 +172,7 @@ Partial Class FormAnggota
         '
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.JeniskelaminDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.AnggotaBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(106, 269)
         Me.DataGridView1.Name = "DataGridView1"
@@ -227,39 +209,59 @@ Partial Class FormAnggota
         Me.DataGridViewTextBoxColumn5.HeaderText = "no_telp"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
-        'DataGridViewTextBoxColumn6
+        'JeniskelaminDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "tgl_lahir"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "tgl_lahir"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.JeniskelaminDataGridViewTextBoxColumn.DataPropertyName = "jenis_kelamin"
+        Me.JeniskelaminDataGridViewTextBoxColumn.HeaderText = "jenis_kelamin"
+        Me.JeniskelaminDataGridViewTextBoxColumn.Name = "JeniskelaminDataGridViewTextBoxColumn"
         '
         'AnggotaBindingSource
         '
         Me.AnggotaBindingSource.DataMember = "anggota"
-        Me.AnggotaBindingSource.DataSource = Me.PerpustakaanDataSet2
+        Me.AnggotaBindingSource.DataSource = Me.PerpustakaanDataSet1
         '
-        'PerpustakaanDataSet2
+        'PerpustakaanDataSet1
         '
-        Me.PerpustakaanDataSet2.DataSetName = "perpustakaanDataSet2"
-        Me.PerpustakaanDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.PerpustakaanDataSet1.DataSetName = "perpustakaanDataSet1"
+        Me.PerpustakaanDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(457, 157)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(97, 20)
+        Me.Label6.TabIndex = 19
+        Me.Label6.Text = "Jenis Kelamin:"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(561, 156)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(192, 21)
+        Me.ComboBox1.TabIndex = 20
         '
         'AnggotaTableAdapter
         '
         Me.AnggotaTableAdapter.ClearBeforeFill = True
         '
-        'DateTimePicker1
+        'TextBox5
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(504, 156)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(192, 20)
-        Me.DateTimePicker1.TabIndex = 19
+        Me.TextBox5.Location = New System.Drawing.Point(153, 154)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(298, 20)
+        Me.TextBox5.TabIndex = 21
         '
         'FormAnggota
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(838, 502)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.keluar)
         Me.Controls.Add(Me.edit)
@@ -267,10 +269,8 @@ Partial Class FormAnggota
         Me.Controls.Add(Me.simpan)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label2)
@@ -280,7 +280,7 @@ Partial Class FormAnggota
         Me.Text = "FormAnggota"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AnggotaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PerpustakaanDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PerpustakaanDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -290,10 +290,8 @@ Partial Class FormAnggota
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents simpan As System.Windows.Forms.Button
@@ -309,14 +307,16 @@ Partial Class FormAnggota
     Friend WithEvents NotelpDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents TgllahirDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents PerpustakaanDataSet2 As Perpustakaan.perpustakaanDataSet2
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents PerpustakaanDataSet1 As Perpustakaan.perpustakaanDataSet1
     Friend WithEvents AnggotaBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents AnggotaTableAdapter As Perpustakaan.perpustakaanDataSet2TableAdapters.anggotaTableAdapter
+    Friend WithEvents AnggotaTableAdapter As Perpustakaan.perpustakaanDataSet1TableAdapters.anggotaTableAdapter
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents JeniskelaminDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
 End Class

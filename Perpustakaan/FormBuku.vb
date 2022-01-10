@@ -20,12 +20,7 @@ Public Class FormBuku
     End Sub
 
     Private Sub FormBuku_Load(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Call Koneksi()
-        da = New OleDbDataAdapter("select * from buku", conn)
-        ds = New DataSet
-        ds.Clear()
-        da.Fill(ds, "buku")
-        DataGridView1.DataSource = (ds.Tables("buku"))
+        Call baca()
     End Sub
 
     Private Sub btnTambah_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTambah.Click
@@ -39,6 +34,7 @@ Public Class FormBuku
             cmd.ExecuteNonQuery()
             MsgBox("Data berhasil di Input", MsgBoxStyle.Information, "Information")
             Call baca()
+            Call kosong()
         End If
     End Sub
 
@@ -66,16 +62,5 @@ Public Class FormBuku
         TextBox1.Enabled = True
         Call baca()
         Call kosong()
-    End Sub
-
-    
-    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
-
-    End Sub
-
-    Private Sub FormBuku_Load_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'PerpustakaanDataSet1.buku' table. You can move, or remove it, as needed.
-        Me.BukuTableAdapter.Fill(Me.PerpustakaanDataSet1.buku)
-
-    End Sub
+    End Sub  
 End Class

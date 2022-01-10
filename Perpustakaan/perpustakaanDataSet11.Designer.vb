@@ -475,8 +475,8 @@ Partial Public Class perpustakaanDataSet1
             Me.columnno_buku.MaxLength = 11
             Me.columnjudul.MaxLength = 255
             Me.columnpengarang.MaxLength = 255
-            Me.columnjenis_buku.MaxLength = 30
-            Me.columnstatus.MaxLength = 30
+            Me.columnjenis_buku.MaxLength = 50
+            Me.columnstatus.MaxLength = 50
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1003,7 +1003,7 @@ Namespace perpustakaanDataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.Perpustakaan.My.MySettings.Default.perpustakaanConnectionString
+            Me._connection.ConnectionString = Global.Perpustakaan.My.MySettings.Default.perpustakaanConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _

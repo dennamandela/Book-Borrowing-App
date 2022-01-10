@@ -40,7 +40,7 @@
     <OptionExplicit>On</OptionExplicit>
   </PropertyGroup>
   <PropertyGroup>
-    <OptionCompare>Binary</OptionCompare>
+    <OptionCompare>Text</OptionCompare>
   </PropertyGroup>
   <PropertyGroup>
     <OptionStrict>Off</OptionStrict>
@@ -112,15 +112,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="perpustakaanDataSet.Designer.vb">
+    <Compile Include="perpustakaanDataSet12.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>perpustakaanDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="perpustakaanDataSet11.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>perpustakaanDataSet11.xsd</DependentUpon>
+      <DependentUpon>perpustakaanDataSet12.xsd</DependentUpon>
     </Compile>
     <Compile Include="perpustakaanDataSet2.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -181,27 +176,16 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="perpustakaanDataSet.xsc">
-      <DependentUpon>perpustakaanDataSet.xsd</DependentUpon>
+    <None Include="perpustakaanDataSet12.xsc">
+      <DependentUpon>perpustakaanDataSet12.xsd</DependentUpon>
     </None>
-    <None Include="perpustakaanDataSet.xsd">
+    <None Include="perpustakaanDataSet12.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>perpustakaanDataSet.Designer.vb</LastGenOutput>
+      <LastGenOutput>perpustakaanDataSet12.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="perpustakaanDataSet.xss">
-      <DependentUpon>perpustakaanDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="perpustakaanDataSet11.xsc">
-      <DependentUpon>perpustakaanDataSet11.xsd</DependentUpon>
-    </None>
-    <None Include="perpustakaanDataSet11.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>perpustakaanDataSet11.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="perpustakaanDataSet11.xss">
-      <DependentUpon>perpustakaanDataSet11.xsd</DependentUpon>
+    <None Include="perpustakaanDataSet12.xss">
+      <DependentUpon>perpustakaanDataSet12.xsd</DependentUpon>
     </None>
     <None Include="perpustakaanDataSet2.xsc">
       <DependentUpon>perpustakaanDataSet2.xsd</DependentUpon>

@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="perpustakaanConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="perpustakaanConnectionString (MySettings)" PropertyReference="ApplicationSettings.Perpustakaan.My.MySettings.GlobalReference.Default.perpustakaanConnectionString" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="perpustakaanConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="perpustakaanConnectionString1 (MySettings)" PropertyReference="ApplicationSettings.Perpustakaan.My.MySettings.GlobalReference.Default.perpustakaanConnectionString1" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="bukuTableAdapter" GeneratorDataComponentClassName="bukuTableAdapter" Name="buku" UserDataComponentName="bukuTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="perpustakaanConnectionString (MySettings)" DbObjectName="buku" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="perpustakaanConnectionString1 (MySettings)" DbObjectName="buku" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `buku` WHERE ((`no_buku` = ?) AND ((? = 1 AND `judul` IS NULL) OR (`judul` = ?)) AND ((? = 1 AND `pengarang` IS NULL) OR (`pengarang` = ?)) AND ((? = 1 AND `tahun_terbit` IS NULL) OR (`tahun_terbit` = ?)) AND ((? = 1 AND `jenis_buku` IS NULL) OR (`jenis_buku` = ?)) AND ((? = 1 AND `status` IS NULL) OR (`status` = ?)))</CommandText>
@@ -119,14 +119,14 @@
               <xs:element name="jenis_buku" msprop:Generator_ColumnVarNameInTable="columnjenis_buku" msprop:Generator_ColumnPropNameInRow="jenis_buku" msprop:Generator_ColumnPropNameInTable="jenis_bukuColumn" msprop:Generator_UserColumnName="jenis_buku" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="30" />
+                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="30" />
+                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
